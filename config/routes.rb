@@ -1,4 +1,6 @@
 FlickrView::Application.routes.draw do
+  root to: 'flickr#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
