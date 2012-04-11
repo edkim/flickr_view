@@ -2,10 +2,13 @@ require 'flickraw'
 
 class FlickrController < ApplicationController
   def home
+  	redirect_to "/flickr" if user_signed_in?
   end
 
 
   def show
+  	redirect_to "/" if !user_signed_in?
+  	
   	FlickRaw.api_key="5448acb0be52ab7d71af7d0498829ea6"
 	FlickRaw.shared_secret="9552411e9c7dd486"
 
