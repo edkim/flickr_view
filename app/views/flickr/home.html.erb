@@ -1,9 +1,15 @@
 <div class="center hero-unit">
   <h1>Welcome to Flickr View!</h1>
 
-  <h2>
-    Please sign up to see some great photos
-  </h2>
+  <% if user_signed_in? %>
+  	<h2>
+      Here are some awesome photos...
+  	</h2>  
 
+  <% else %>
+  	<h2>
+      Please sign up to see some great photos
+  	</h2>  
   <%= link_to "Sign up now!", '/users/sign_up', class: "btn btn-large btn-primary" %>
+  <% end %>
 </div>

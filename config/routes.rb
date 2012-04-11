@@ -4,7 +4,7 @@ FlickrView::Application.routes.draw do
   #get "users/new"
 
   root to: 'flickr#home'
-  #match '/signup',  to: 'users#new'
+  match '/flickr',  to: 'flickr#show'
   
 
   # The priority is based upon order of creation:
